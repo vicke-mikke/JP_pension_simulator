@@ -62,7 +62,7 @@ If invested, you can withdraw **{annual_withdrawal:.2f} yen** annually for {life
 
     st.markdown('# Simulation at different ages')
     fig = px.bar(df, x="Age", y="Annual Withdrawal", 
-                title=f'Potential annual withdrawal from a month contribution at each age: Inflation adjusted return = {average_real_return} %')
+                title=f'Potential annual withdrawal from a month contribution if invested: Inflation adjusted return = {average_real_return} %')
     fig.add_hline(y=pension_value_increase_from_monthly_contribution, line_dash="dot", annotation_text="Pension value increase from a month contribution", annotation_position="top right")
     # fig.show()
     st.plotly_chart(fig, use_container_width=True)
